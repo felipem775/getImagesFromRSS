@@ -3,10 +3,9 @@
 import sys
 import urllib
 import os
-#import datetime
 import json
 
-json_data=open(os.path.dirname(__file__) + '/getImagesFromRSS.config')
+json_data=open(os.path.realpath(__file__).replace('.py','.config'))
 data = json.load(json_data)
 json_data.close()
 
