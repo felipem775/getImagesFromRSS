@@ -32,8 +32,6 @@ for rs in rss:
     line = line.split('"')
     for l in line:
       l = l.replace('_m.jpg','_b.jpg')
-      if "_400." in l:
-        continue
       if l[0:4] == "http" and l[len(l)-4:len(l)] in images and l not in oldPics:
         newPics.append(l)
         name = l.split('/')
